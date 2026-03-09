@@ -20,11 +20,6 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Extract source
-        run: |
-          tar -xzf esp_overlay.tar.gz
-          cp -r esp_overlay/* .
-
       - name: Build with Gradle
         run: |
           chmod +x gradlew
